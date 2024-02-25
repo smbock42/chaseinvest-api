@@ -5,6 +5,9 @@ from chase import order as och
 from chase import session
 from chase import symbols as sym
 
+# get environment variables
+load_dotenv()
+
 # create Session
 cs = session.ChaseSession(title="Title of your profile here", docker=False)
 
