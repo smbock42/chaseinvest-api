@@ -14,7 +14,7 @@ load_dotenv()
 cs = session.ChaseSession(title="Title of your profile here", docker=False)
 
 # Login to Chase.com
-login = cs.login("your_username", "your_password", "last_four_of_your_cell_phone")
+login = cs.login(os.getenv("USER"), os.getenv("PASSWORD"), os.getenv("LAST_FOUR"))
 
 if login is False:
     sys.exit("Failed to login to chase.com")
