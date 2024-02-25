@@ -1,4 +1,6 @@
 import sys
+import os
+from dotenv import load_dotenv
 
 from chase import account as acc
 from chase import order as och
