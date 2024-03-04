@@ -11,7 +11,7 @@ from chase import symbols as sym
 load_dotenv()
 
 # create Session
-cs = session.ChaseSession(title="Title of your profile here", docker=False)
+cs = session.ChaseSession(title=os.getenv("PROFILE_NAME"), docker=False)
 
 # Login to Chase.com
 login = cs.login(os.getenv("USER"), os.getenv("PASSWORD"), os.getenv("LAST_FOUR"))
